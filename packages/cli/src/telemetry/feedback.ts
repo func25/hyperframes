@@ -88,7 +88,7 @@ export async function maybePromptRenderFeedback(opts: {
 export async function getDoctorSummary(): Promise<string> {
   try {
     const [{ getSystemMeta }, { findFFmpeg }] = await Promise.all([
-      import("../telemetry/system.js"),
+      import("./system.js"),
       import("../browser/ffmpeg.js"),
     ]);
     const sys = getSystemMeta();
